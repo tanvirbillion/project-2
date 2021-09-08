@@ -1,0 +1,5 @@
+  {% if request.user|has_group:"admin" %}
+        {% include 'adminlite/index.html' %}
+  {% else %}
+    {% include 'home.html' %}
+  {% endif %}
